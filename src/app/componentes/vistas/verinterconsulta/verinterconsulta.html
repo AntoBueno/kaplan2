@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title><strong>Interconsultas</strong></ion-title>
+  </ion-toolbar>
+  <ion-button ion-button expand = "small" type="submit"  color="secondary" (click)="goAgregar()">Agregar Datos </ion-button>  
+<ion-button ion-button expand = "small" type="submit"  color="warning" (click)="back()">Volver </ion-button>
+<ion-button ion-button expand = "small" type="submit"  color="tertiary"  (click)='logout()'>Salir</ion-button>
+</ion-header>
+<ion-content class="ion-padding" *ngFor="let interconsulta of inter">
+    <ion-card-title><strong> {{interconsulta.nombre_paciente}} </strong></ion-card-title>
+    <ion-card-subtitle> Rut: {{interconsulta.rut_paciente}} </ion-card-subtitle>
+<ion-item>
+  <ion-label>
+      <ion-grid>
+    <p> <strong> Fecha de atención: </strong> {{interconsulta.fecha_atencion}} </p>
+    <p> <strong > Nombre del médico: </strong> {{interconsulta.nombre_medico}} </p>
+    <p> <strong> Sexo: </strong> {{interconsulta.genero}} </p>
+    <p> <strong> Peso paciente: </strong> {{interconsulta.peso_paciente}} </p>
+    <p > <strong>Altura paciente: </strong > {{interconsulta.altura_paciente}} </p>
+    <p> <strong> Presión cardiaca: </strong> {{interconsulta.presion_cardiaca}} </p>
+    <p> <strong> Observaciones médicas: </strong> {{interconsulta.observaciones_medicas}} </p>
+ 
+    </ion-grid>
+  </ion-label>
+</ion-item>
+</ion-content>
+

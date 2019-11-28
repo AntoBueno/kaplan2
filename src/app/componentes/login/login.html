@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-title>Iniciar sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class = "ion-padding">
+  <img class="icon" src="assets/icon/logo_lifeplus.png" alt="">
+    <ion-item>
+        <ion-label position ="floating">Correo electrónico</ion-label>
+        <ion-input maxlength="30" type = "text" [(ngModel)]="email" name = "email" ></ion-input>
+      </ion-item>
+      
+      <ion-item>
+          <ion-label position ="floating">Constraseña</ion-label>
+          <ion-input maxlength="10" type = "password" [(ngModel)]="password" name = "password" ></ion-input>
+        </ion-item>
+
+        
+        <br>
+        <ion-button ion-button full class = "submit-button" type="submit" (click)="tryLogin()" color ="primary">Entrar </ion-button>
+          
+          <div>
+            <p>Si usted no tiene cuenta puede hacer click en <a class = "registro" (click)="goRegisterPage()">REGISTRARSE</a></p>
+          </div>
+          <br>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+      <br>
+      <ion-title>Ficha Nutrición</ion-title>
+    </ion-toolbar>
+    <ion-button ion-button expand = "small" type="submit"  color="secondary" (click)="goAgregar()">Agregar Datos </ion-button>  
+<ion-button ion-button expand = "small" type="submit"  color="warning" (click)="back()">Volver </ion-button>
+<ion-button ion-button expand = "small" type="submit"  color="tertiary"  (click)='logout()'>Salir</ion-button>
+  </ion-header>
+  <ion-content class="ion-padding" *ngFor="let nutricion of inter" > 
+    <ion-card-title><strong> {{nutricion.nombres}} {{nutricion.paterno}} {{nutricion.materno}} </strong></ion-card-title>
+    <ion-card-subtitle> Rut: {{nutricion.rut}} </ion-card-subtitle>
+    <ion-item>
+        <ion-label>
+        <ion-list>
+        
+        <p > <strong> Id ficha nutricion:</strong > {{nutricion.id_ficha_nutri}} </p>
+        <p > <strong> Numero control nutricion:</strong > {{nutricion.n_contr_nutr}} </p>
+        <p > <strong> Fecha evaluacion ingreso:</strong > {{nutricion.fecha_eval_ing}} </p>
+        <p > <strong> Fecha evaluacion egreso:</strong > {{nutricion.fecha_eval_egr}} </p>
+        <p > <strong> Kilogramos musculatura ingreso:</strong > {{nutricion.kg_musc_ing}} </p>
+        <p > <strong> Kilogramos musculatura egreso:</strong > {{nutricion.kg_musc_egr}} </p>
+        <p > <strong> Kilogramos grasa ingreso:</strong > {{nutricion.kg_grasa_ing}} </p>
+        <p > <strong> Kilogramos grasa egreso:</strong > {{nutricion.kg_grasa_egr}} </p>
+        <p > <strong> Porcion mg ingreso:</strong > {{nutricion.porc_mg_ing}} </p>
+        <p > <strong> Porcion mg egreso:</strong > {{nutricion.porc_mg_egr}} </p>
+        <p > <strong> Nivel gv egreso:</strong > {{nutricion.nivel_gv_egr}} </p>
+        <p > <strong> Indice ingreso:</strong > {{nutricion.indice_ing}} </p>
+        <p > <strong> P cintura ingreso:</strong > {{nutricion.p_cintura_ing}} </p>
+        <p > <strong> P cintura egreso:</strong > {{nutricion.p_cintura_egr}} </p>
+        <p > <strong> IMC ingreso:</strong > {{nutricion.imc_ing}} </p>
+        <p > <strong> IMC egreso:</strong > {{nutricion.imc_egr}} </p>
+        <p > <strong> Estado nutricion ingreso:</strong > {{nutricion.estado_nutr_ing}} </p>
+        <p > <strong> Estado nutricion egreso:</strong > {{nutricion.estado_nutr_egr}} </p>
+        <p > <strong> Soporte nutricion egreso:</strong > {{nutricion.soporte_nutr_egr}} </p>
+        <p > <strong> Morbidos:</strong > {{nutricion.morbidos}} </p>
+        <p > <strong> P cardio:</strong > {{nutricion.p_cardio}} </p>
+
+        </ion-list>
+      
+      </ion-label>
+      </ion-item>
+     
+      </ion-content>

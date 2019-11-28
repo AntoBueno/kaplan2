@@ -1,0 +1,137 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+      <br>
+      <ion-title>Nueva Ficha Nutricion</ion-title>
+    </ion-toolbar>
+    <ion-button ion-button expand = "small" type="submit"  color="secondary" (click)="back()">Volver </ion-button>
+  </ion-header>
+  <ion-item>Nutricion</ion-item>
+  <ion-content class="ion-padding">
+
+        <ion-item>  
+            <ion-label position="floating"> Rut paciente </ion-label>
+            <ion-input type="text"[(ngModel)]="nutricion.rut" > </ion-input>
+          </ion-item>
+
+          <ion-item>  
+              <ion-label position="floating"> Nombres </ion-label>
+              <ion-input type="text"[(ngModel)]="nutricion.nombres" > </ion-input>
+            </ion-item>
+          
+            <ion-item>  
+                <ion-label position="floating"> Apellido paterno </ion-label>
+                <ion-input type="text"[(ngModel)]="nutricion.paterno" > </ion-input>
+              </ion-item>
+          
+              <ion-item>  
+                  <ion-label position="floating"> Apellido materno </ion-label>
+                  <ion-input type="text"[(ngModel)]="nutricion.materno" > </ion-input>
+                </ion-item>
+              
+              <ion-item>  
+                    <ion-label position="floating"> Id ficha nutricion </ion-label>
+                    <ion-input type="text"[(ngModel)]="nutricion.id_ficha_nutri" > </ion-input>
+                </ion-item>
+
+              <ion-item>  
+                      <ion-label position="floating"> Numero control nutricion </ion-label>
+                      <ion-input type="text"[(ngModel)]="nutricion.n_contr_nutr" > </ion-input>
+                </ion-item>
+                <ion-item>  
+                        <ion-label position="floating"> Fecha evaluacion ingreso </ion-label>
+                       <ion-datetime [(ngModel)]="nutricion.fecha_eval_ing" display-format="YYYY,DD,MM  :" > </ion-datetime>
+                </ion-item> 
+                 <ion-item>  
+                            <ion-label position="floating"> Fecha evaluacion egreso </ion-label>
+                           <ion-datetime [(ngModel)]="nutricion.fecha_eval_egr" display-format="YYYY,DD,MM  :" > </ion-datetime>
+                  </ion-item>  
+              
+                   <ion-item>  
+                      <ion-label position="floating">  Kilogramos musculatura ingreso </ion-label>
+                      <ion-input type="text"[(ngModel)]="nutricion.kg_musc_ing" > </ion-input>
+                   </ion-item>
+                    <ion-item>  
+                           <ion-label position="floating">  Kilogramos musculatura egreso </ion-label>
+                           <ion-input type="text"[(ngModel)]="nutricion.kg_musc_egr" > </ion-input>
+                    </ion-item>
+
+                    <ion-item>  
+                        <ion-label position="floating">  Kilogramos grasa ingreso </ion-label>
+                        <ion-input type="text"[(ngModel)]="nutricion.kg_grasa_ing" > </ion-input>
+                     </ion-item>
+                      <ion-item>  
+                             <ion-label position="floating">  Kilogramos grasa egreso </ion-label>
+                             <ion-input type="text"[(ngModel)]="nutricion.kg_grasa_egr" > </ion-input>
+                      </ion-item>
+                  
+                    <ion-item>  
+                         <ion-label position="floating">  Porcion mg ingreso </ion-label>
+                        <ion-input type="text"[(ngModel)]="nutricion.porc_mg_ing" > </ion-input>
+                   </ion-item>
+
+                   <ion-item>  
+                      <ion-label position="floating">  Porcion mg egreso </ion-label>
+                     <ion-input type="text"[(ngModel)]="nutricion.porc_mg_egr" > </ion-input>
+                </ion-item>
+
+                <ion-item>  
+                    <ion-label position="floating">  Nivel gv egreso </ion-label>
+                   <ion-input type="text"[(ngModel)]="nutricion.nivel_gv_egr" > </ion-input>
+              </ion-item>
+
+              <ion-item>  
+                  <ion-label position="floating">  Indice ingreso </ion-label>
+                 <ion-input type="text"[(ngModel)]="nutricion.indice_ing" > </ion-input>
+              </ion-item>
+              <ion-item>  
+                <ion-label position="floating">  P cintura ingreso </ion-label>
+               <ion-input type="text"[(ngModel)]="nutricion.p_cintura_ing" > </ion-input>
+              </ion-item>
+
+              <ion-item>  
+                  <ion-label position="floating">  P cintura egreso </ion-label>
+                 <ion-input type="text"[(ngModel)]="nutricion.p_cintura_egr" > </ion-input>
+                </ion-item>
+
+             <ion-item>  
+                    <ion-label position="floating">  IMC ingreso </ion-label>
+                   <ion-input type="text"[(ngModel)]="nutricion.imc_ing" > </ion-input>
+               </ion-item>
+
+               <ion-item>  
+                      <ion-label position="floating">  IMC egreso </ion-label>
+                     <ion-input type="text"[(ngModel)]="nutricion.imc_egr" > </ion-input>
+               </ion-item>
+
+               <ion-item>  
+                  <ion-label position="floating"> Estado nutricion ingreso </ion-label>
+                 <ion-input type="text"[(ngModel)]="nutricion.estado_nutr_ing" > </ion-input>
+                </ion-item>
+
+                <ion-item>  
+                    <ion-label position="floating"> Estado nutricion egreso </ion-label>
+                   <ion-input type="text"[(ngModel)]="nutricion.estado_nutr_egr" > </ion-input>
+                  </ion-item>
+              
+                  <ion-item>  
+                      <ion-label position="floating"> Soporte nutricion egreso </ion-label>
+                     <ion-input type="text"[(ngModel)]="nutricion.soporte_nutr_egr" > </ion-input>
+                    </ion-item>
+
+                <ion-item>  
+                    <ion-label position="floating"> Morbidos </ion-label>
+                    <ion-input type="text"[(ngModel)]="nutricion.morbidos" > </ion-input>
+                </ion-item>
+
+                <ion-item>  
+                    <ion-label position="floating"> P cardio </ion-label>
+                    <ion-input type="text"[(ngModel)]="nutricion.p_cardio" > </ion-input>
+                </ion-item>
+
+<ion-button (click)="goAgregarNutricion()">Enviar</ion-button>
+</ion-content>
+
+
+
+
+                    

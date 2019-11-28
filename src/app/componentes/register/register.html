@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color = "danger">
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class = "ion-padding">
+  <img class="icon" src="assets/icon/logo_lifeplus.png" alt="">
+
+  <ion-item>
+    <ion-label position ="floating">Inserte su Nombre</ion-label>
+    <ion-input maxlength="15" type = "text" [(ngModel)]="nombre" name = "nombre" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position ="floating">Inserte su rut</ion-label>
+    <ion-input maxlength="10" type = "text" [(ngModel)]="rut" name = "rut" ></ion-input>
+  </ion-item>
+
+    <ion-item>
+        <ion-label position ="floating">Inserte su correo electrónico</ion-label>
+        <ion-input maxlength="20" type = "text" [(ngModel)]="email" name = "email" ></ion-input>
+      </ion-item>
+      
+        <ion-item>
+          <ion-label position ="floating">Inserte su constraseña</ion-label>
+          <ion-input maxlength="10" type = "password" [(ngModel)]="password" name = "password" ></ion-input>
+        </ion-item>
+
+        <label class="error-message">{{errorMessage}}</label>
+        <label class="success-message">{{successMessage}}</label>
+        <br>
+        <ion-button ion-button type="submit" (click)="tryRegister()" color ="danger">Registrarme </ion-button>
+          <br>
+        <ion-button ion-button expand = "small" type="submit"  color="secondary" (click)="goLogin()">Volver a Iniciar sesion </ion-button>
